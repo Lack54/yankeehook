@@ -17,6 +17,7 @@
 #include "camhook.h"
 #include "volleyfx.h"
 #include "crosshair.h"
+#include "nopunish.h"
 #include "config.h"
 #include "weaponscan.h"
 #include "reloadspeed.h"
@@ -150,6 +151,7 @@ static HRESULT STDMETHODCALLTYPE PresentHook(IDXGISwapChain* sc, UINT sync, UINT
         camhook::poll();
         if (!reloadspeed::enabled) reloadspeed::restoreTables();
         godmode::tick();
+        nopunish::tick();
         weapon::tick();
         weaponscan::tick();
         esp::draw();
@@ -226,6 +228,7 @@ void uninstall() {
     fov::restore();
     weapon::restore();
     godmode::restore();
+    nopunish::restore();
     weaponscan::restore();
     chams::uninstall();
     reloadspeed::uninstall();

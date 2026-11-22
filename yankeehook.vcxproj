@@ -93,6 +93,7 @@
     <ClCompile Include="volleyfx.cpp" />
     <ClCompile Include="crosshair.cpp" />
     <ClCompile Include="config.cpp" />
+    <ClCompile Include="nopunish.cpp" />
     <ClCompile Include="crashlog.cpp" />
     <ClCompile Include="godmode.cpp" />
     <ClCompile Include="tracers.cpp" />

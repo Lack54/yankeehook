@@ -15,6 +15,7 @@
 #include "config.h"
 #include "buildflags.h"
 #include "godmode.h"
+#include "nopunish.h"
 #include "weaponscan.h"
 #include "reloadspeed.h"
 
@@ -305,8 +306,9 @@ void pagePlayer(int) {
     ImGui::PushID("player");
     camera::LocalPos lp = camera::readLocal();
     char buf[96];
-    ui::group_begin("##gm", "Player", ImVec2(kLeft, kTop), column(rows(kRespawnTimer ? 3 : 1)));
+    ui::group_begin("##gm", "Player", ImVec2(kLeft, kTop), column(rows(kRespawnTimer ? 3 : 2)));
     ui::checkbox("God mode", godmode::enabled);
+    ui::checkbox("No teamkill punishment", nopunish::enabled);
     if (kRespawnTimer) ui::checkbox("No respawn timer", weapon::noRespawnTimer);
     ui::group_end();
 

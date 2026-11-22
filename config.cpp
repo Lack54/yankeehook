@@ -12,6 +12,7 @@
 #include "weaponscan.h"
 #include "weapon.h"
 #include "godmode.h"
+#include "nopunish.h"
 #include "menu.h"
 #include "ui/theme.hpp"
 
@@ -75,7 +76,7 @@ std::vector<Entry>& reg() {
     B("volley.fireHot", reloadspeed::fireHot); I("volley.fireKey", reloadspeed::fireKey); I("volley.fireMs", reloadspeed::fireMs);
     B("volley.line", magic::lineOn); F("volley.spacing", magic::lineSpacing); B("volley.damage", magic::volleyDamage); B("volley.smoke", volleyfx::enabled);
     // player / menu
-    B("player.god", godmode::enabled);
+    B("player.god", godmode::enabled); B("player.noPunish", nopunish::enabled);
     I("menu.key", menu::toggleKey); F("menu.scale", menu::uiScale);
     C("menu.accent", &yankeehook::gui::theme::accent.x);
     return r;
