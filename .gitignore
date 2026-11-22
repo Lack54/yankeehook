@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+*.user
+*.log
+_patch*.py
+_menu_old_backup.cpp.txt
+*.dll
+*.pdb
+*.obj
+*.ilk
